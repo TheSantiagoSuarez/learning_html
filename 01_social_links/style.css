@@ -1,0 +1,40 @@
+body {
+  font-family: Inter, sans-serif;
+  background-color: hsl(0, 0%, 8%);
+  text-align: center;
+  padding: 50px;
+}
+
+div {
+    background-color: hsl(0, 0%, 12%);
+    border-radius: 6px;
+    width: 500px;
+    padding: 10px 0.1px;
+    margin: auto;
+}
+
+strong {
+    color: hsl(75, 94%, 57%);
+}
+
+p, h2, div {
+    color: hsl(0, 0%, 100%);
+}
+
+p{
+    font-size: 14px;
+}
+
+img{
+    width: 90px;
+    clip-path: circle();
+}
+
+button {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 20%);
+    padding: 7px 20px;
+    width: 300px;
+    border-radius: 6px;
+    font-weight: 600;
+}
