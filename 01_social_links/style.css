@@ -1,52 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Best practice for layouts */
+}
+
 body {
   font-family: Inter, sans-serif;
   background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Ensures vertical centering */
+}
+
+.container {
+  background-color: hsl(0, 0%, 12%);
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2); /* Optional: subtle shadow */
+}
+
+img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%; /* More compatible than clip-path */
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin-bottom: 4px;
+}
+
+h5 {
+  color: hsl(75, 94%, 57%);
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 14px;
   text-align: center;
-  padding: 50px;
+  margin-bottom: 16px;
 }
 
-div {
-    background-color: hsl(0, 0%, 12%);
-    border-radius: 6px;
-    width: 500px;
-    padding: 10px 0.1px;
-    margin: auto;
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Modern spacing */
+  width: 100%;
 }
 
-strong {
-    color: hsl(75, 94%, 57%);
-}
-
-p, h2, div {
-    color: hsl(0, 0%, 100%);
-}
-
-p{
-    font-size: 14px;
-}
-
-img{
-    width: 90px;
-    clip-path: circle();
+.buttons {
+  text-decoration: none;
 }
 
 button {
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(0, 0%, 20%);
-    padding: 7px 20px;
-    width: 300px;
-    border-radius: 6px;
-    font-weight: 600;
-    border: none;
-    outline:none;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 20%);
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
 }
 
-button:hover {
-    background-color: hsl(75, 94%, 57%);
-    color: hsl(0, 0%, 20%);
+button:hover,
+button:focus {
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 20%);
+  outline: none;
 }
 
 button:focus {
-  box-shadow: hsl(0, 0%, 100%) 0 0 0 2px;
-  outline: none;
+  box-shadow: 0 0 0 2px hsl(0, 0%, 100%);
 }
